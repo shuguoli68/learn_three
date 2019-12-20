@@ -10,6 +10,7 @@ class _FreshSimpleState extends State<FreshSimple> {
   List<String> datas = List();
   ZekingRefreshController _refreshController;
   int page = 0;
+  static const int count = 5;//一页可能最多可见10个item
 
   @override
   void initState() {
@@ -29,6 +30,7 @@ class _FreshSimpleState extends State<FreshSimple> {
         onRefresh: onRefresh,
         onLoading: onLoading,
         child: ListView.builder(
+          cacheExtent: 30.0,
           padding: EdgeInsets.all(2),
           itemBuilder: (BuildContext context, int index) {
             return _itemWidget(index);
@@ -58,7 +60,7 @@ class _FreshSimpleState extends State<FreshSimple> {
   _reqData(bool isRefresh) async {
     Future.delayed(const Duration(milliseconds: 200,), (){
       List<String> mData = List();
-      for(int i=0;i<20;++i){
+      for(int i=0;i<count;++i){
         mData.add('$page $i value $page $i');
       }
       setState(() {
@@ -66,10 +68,13 @@ class _FreshSimpleState extends State<FreshSimple> {
       });
       if(page%2 == 0){//成功
         if(isRefresh){
-          if(mData.isNotEmpty)
+          if(mData.isNotEmpty) {
             _refreshController.refreshSuccess();
-          else
+            //一页可能最多可见10个item
+            if (mData.length < count) _refreshController.loadMoreNoMore();
+          } else {
             _refreshController.refreshEmpty();
+          }
         }else{
           if(mData.isNotEmpty)
             _refreshController.loadMoreSuccess();
