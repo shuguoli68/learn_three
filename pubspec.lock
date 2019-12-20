@@ -71,6 +71,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.14.11"
+  connectivity:
+    dependency: "direct main"
+    description:
+      name: connectivity
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.6+1"
   convert:
     dependency: transitive
     description:
@@ -270,6 +277,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.5"
+  share:
+    dependency: "direct main"
+    description:
+      name: share
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.3+5"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -368,3 +382,4 @@ packages:
     version: "0.0.11"
 sdks:
   dart: ">2.4.0 <3.0.0"
+  flutter: ">=1.10.0 <2.0.0"

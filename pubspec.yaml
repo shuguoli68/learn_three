@@ -26,6 +26,9 @@ dependencies:
   json_serializable: ^3.2.3 # https://github.com/dart-lang/json_serializable
   dio: ^3.0.7 # https://github.com/flutterchina/dio
   zeking_refresh: ^0.0.8 # https://github.com/LZQL/zeking_refresh
+#  camera: ^0.5.7+2 # https://pub.dev/packages/camera#-readme-tab-
+  connectivity: ^0.4.6+1 # https://pub.dev/packages/connectivity#-readme-tab-
+  share: ^0.6.3+5 # https://pub.dev/packages/share#-readme-tab-
 
 
 dev_dependencies:

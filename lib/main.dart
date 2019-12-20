@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
+import 'camera/camera_simple.dart';
+import 'connect/connect_simple.dart';
 import 'fresh/fresh_simple.dart';
 import 'global/common.dart';
 
@@ -27,12 +30,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
   void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+    Share.share('check out my website https://example.com');
   }
 
   @override
@@ -52,6 +52,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 goTo(context, FreshSimple());
               },child: Text('刷新加载'),)
             ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, CameraSimple());
+                },child: Text('相机'),)
+            ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, ConnectSimple());
+                },child: Text('网络状态'),)
+            ),
+
 
           ],
         ),

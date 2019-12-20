@@ -10,7 +10,7 @@ class _FreshSimpleState extends State<FreshSimple> {
   List<String> datas = List();
   ZekingRefreshController _refreshController;
   int page = 0;
-  static const int count = 5;//一页可能最多可见10个item
+  static const int count = 20;//一页可能最多可见10个item
 
   @override
   void initState() {
