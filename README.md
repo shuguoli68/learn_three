@@ -19,6 +19,7 @@ samples, guidance on mobile development, and a full API reference.
 - 1、刷新加载 <a href="https://github.com/LZQL/zeking_refresh" target="_blank">https://github.com/LZQL/zeking_refresh</a>  
 简介：一个支持刷新加载中，刷新失败，刷新空数据，加载更多加载中，加载更多失败，加载更多加载全部数据，业务loading的刷新组件  
 
-- 2、
+- 2、connectivity  <a href="https://pub.dev/packages/connectivity#-readme-tab-" target="_blank">https://pub.dev/packages/connectivity#-readme-tab-</a>
+简介：一个判断当前网络的库。
 
 - 3、
