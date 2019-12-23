@@ -63,11 +63,17 @@ class _MyHomePageState extends State<MyHomePage> {
 
             Container(
                 margin: EdgeInsets.all(5),
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  border: Border(left: BorderSide(color: Colors.red,width: 3,style: BorderStyle.solid)),
+                ),
                 width: double.maxFinite,
                 child: RaisedButton(onPressed:(){
                   goTo(context, ConnectSimple());
                 },child: Text('网络状态'),)
             ),
+
 
 
           ],

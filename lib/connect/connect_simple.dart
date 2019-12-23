@@ -2,9 +2,11 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:connectivity/connectivity.dart';
+import 'package:device_info/device_info.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:learn_three/global/common.dart';
 
 // Sets a platform override for desktop to avoid exceptions. See
 // https://flutter.dev/desktop#target-platform-override for more info.
@@ -24,6 +26,8 @@ class _ConnectSimpleState extends State<ConnectSimple> {
   final Connectivity _connectivity = Connectivity();
   StreamSubscription<ConnectivityResult> _connectivitySubscription;
 
+  String _deviceInfo = "deviceInfo";
+
   @override
   void initState() {
     super.initState();
@@ -31,6 +35,7 @@ class _ConnectSimpleState extends State<ConnectSimple> {
     initConnectivity();
     _connectivitySubscription =
         _connectivity.onConnectivityChanged.listen(_updateConnectionStatus);
+    _initDevice();
   }
 
   @override
@@ -59,13 +64,30 @@ class _ConnectSimpleState extends State<ConnectSimple> {
     return _updateConnectionStatus(result);
   }
 
+  _initDevice() async {
+    if(isAndroid()){
+      DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
+      AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
+      print('Running on ${androidInfo}');  // e.g. "Moto G (4)"
+      setState(() {
+        _deviceInfo = 'product:${androidInfo.product},model:${androidInfo.model},version-baseOS:${androidInfo.version.baseOS}';
+      });
+
+//      IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
+//      print('Running on ${iosInfo.utsname.machine}');  // e.g. "iPod7,1"
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Plugin example app'),
       ),
-      body: Center(child: Text('Connection Status: $_connectionStatus')),
+      body: Center(child: Column(children: <Widget>[
+        Text('Connection Status: $_connectionStatus'),
+        Text('deviceInfo:\n  $_deviceInfo'),
+      ],)),
     );
   }
 

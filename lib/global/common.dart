@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 
@@ -21,4 +23,10 @@ numStr(int count){
   }else{
     return (count/10000.0).toStringAsFixed(1)+'万';
   }
+}
+
+isAndroid(){
+  if(Platform.isAndroid)
+    return true;
+  return false;
 }
