@@ -5,6 +5,7 @@ import 'camera/camera_simple.dart';
 import 'connect/connect_simple.dart';
 import 'fresh/fresh_simple.dart';
 import 'global/common.dart';
+import 'layout/large_screen.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -23,6 +24,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('LTL'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.map), onPressed: (){
+            goTo(context, LargeScreenPage(title: '大屏幕适配',));
+          },),
+
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(

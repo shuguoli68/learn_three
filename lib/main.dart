@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    timer = Timer(const Duration(milliseconds: 100),(){
+    timer = Timer(const Duration(milliseconds: 1000),(){
       goToRm(context, HomePage());
     });
   }
