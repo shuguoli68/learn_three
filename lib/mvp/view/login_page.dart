@@ -98,6 +98,6 @@ class _LoginState extends BaseState<LoginPage, ILoginPresenter> implements ILogi
 
   @override
   updateView(String data) {
-
+    print('结果：$data');
   }
 }
