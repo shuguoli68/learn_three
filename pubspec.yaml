@@ -30,6 +30,7 @@ dependencies:
   connectivity: ^0.4.6+1 # https://pub.dev/packages/connectivity
   share: ^0.6.3+5 # https://pub.dev/packages/share
   device_info: ^0.4.1+4 # https://pub.dev/packages/device_info
+  image_picker: ^0.6.2+3 # https://pub.dev/packages/image_picker
 
 
 dev_dependencies:

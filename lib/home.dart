@@ -5,6 +5,7 @@ import 'camera/camera_simple.dart';
 import 'connect/connect_simple.dart';
 import 'fresh/fresh_simple.dart';
 import 'global/common.dart';
+import 'imgpicker/img_picker.dart';
 import 'layout/large_screen.dart';
 
 class HomePage extends StatefulWidget {
@@ -64,7 +65,13 @@ class _HomePageState extends State<HomePage> {
                 },child: Text('网络状态'),)
             ),
 
-
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, ImgPicker());
+                },child: Text('相机相册'),)
+            ),
 
           ],
         ),
