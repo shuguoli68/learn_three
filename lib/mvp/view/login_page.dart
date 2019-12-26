@@ -20,7 +20,12 @@ class _LoginState extends BaseState<LoginPage, ILoginPresenter> implements ILogi
       body: Center(
           child: SingleChildScrollView(
             child: Container(
-//            color: Colors.white,
+//              decoration: BoxDecoration(
+//                  gradient: LinearGradient(
+//                    colors: [Color(0xFFfbab66), Color(0xFFf7418c)],
+//                    begin: Alignment.topCenter,
+//                    end: Alignment.bottomCenter,
+//                  )),
               padding: EdgeInsets.only(left: 30,right: 30),
               child: Column(
                 children: <Widget>[
