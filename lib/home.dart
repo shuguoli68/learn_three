@@ -6,8 +6,10 @@ import 'connect/connect_simple.dart';
 import 'fresh/fresh_simple.dart';
 import 'global/common.dart';
 import 'imgpicker/img_picker.dart';
+import 'layout/frosted_glass.dart';
 import 'layout/large_screen.dart';
 import 'mvp/view/login_page.dart';
+import 'url_launcher/url_simple.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -80,6 +82,22 @@ class _HomePageState extends State<HomePage> {
                 child: RaisedButton(onPressed:(){
                   goTo(context, LoginPage());
                 },child: Text('MVP示例'),)
+            ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, UrlSimple());
+                },child: Text('url_launcher'),)
+            ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, FrostedGlass());
+                },child: Text('毛玻璃'),)
             ),
 
           ],
