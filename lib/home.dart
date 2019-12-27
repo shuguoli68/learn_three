@@ -8,6 +8,7 @@ import 'global/common.dart';
 import 'imgpicker/img_picker.dart';
 import 'layout/frosted_glass.dart';
 import 'layout/large_screen.dart';
+import 'layout/notification_simple.dart';
 import 'layout/slider_screen.dart';
 import 'mvp/view/login_page.dart';
 import 'url_launcher/url_simple.dart';
@@ -107,6 +108,14 @@ class _HomePageState extends State<HomePage> {
                 child: RaisedButton(onPressed:(){
                   goTo(context, FrostedGlass());
                 },child: Text('毛玻璃'),)
+            ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, NotifyPage());
+                },child: Text('通知'),)
             ),
 
           ],
