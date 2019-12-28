@@ -9,6 +9,7 @@ import 'imgpicker/img_picker.dart';
 import 'layout/frosted_glass.dart';
 import 'layout/large_screen.dart';
 import 'layout/notification_simple.dart';
+import 'layout/permission_simple.dart';
 import 'layout/qrscan_simple.dart';
 import 'layout/slider_screen.dart';
 import 'mvp/view/login_page.dart';
@@ -48,6 +49,14 @@ class _HomePageState extends State<HomePage> {
                 child: RaisedButton(onPressed:(){
                   goTo(context, SliderScreen());
                 },child: Text('应该介绍页'),)
+            ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, PermissionSimple());
+                },child: Text('权限申请'),)
             ),
 
             Container(
