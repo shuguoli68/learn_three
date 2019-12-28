@@ -34,6 +34,8 @@ dependencies:
   #url_launcher: ^5.4.1 # https://pub.dev/packages/url_launcher
   intro_slider: ^2.2.8 # https://pub.dartlang.org/packages/intro_slider
   flutter_local_notifications: ^0.9.1 # https://pub.dev/packages/flutter_local_notifications
+  qr_flutter: ^3.1.0 # https://pub.dev/packages/qr_flutter
+  barcode_scan: ^1.0.0 # https://pub.dev/packages/barcode_scan
 
 
 dev_dependencies:
