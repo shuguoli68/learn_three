@@ -6,6 +6,7 @@ import 'connect/connect_simple.dart';
 import 'fresh/fresh_simple.dart';
 import 'global/common.dart';
 import 'imgpicker/img_picker.dart';
+import 'layout/back_press.dart';
 import 'layout/frosted_glass.dart';
 import 'layout/large_screen.dart';
 import 'layout/notification_simple.dart';
@@ -134,6 +135,14 @@ class _HomePageState extends State<HomePage> {
                 child: RaisedButton(onPressed:(){
                   goTo(context, QrscanSimple());
                 },child: Text('二维码生成与扫描'),)
+            ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, BackPress());
+                },child: Text('返回拦截'),)
             ),
 
           ],
