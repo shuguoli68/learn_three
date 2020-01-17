@@ -96,5 +96,15 @@ class ApiService{
     return base(Api.article+'$page/json', req);
   }
 
-
+  static Future<Response> downLoad({FormData req})async{
+    var response;
+    try {
+      response = await Dio().post('http://localhost:8085/download/splash.png', data: req, options: Options(headers: _getHeader()));
+      print('post响应数据：' + response.toString());
+    }on DioError catch (e) {
+      /// 打印请求失败相关信息
+      print('post请求出错：' + e.toString());
+    }
+    return response;
+  }
 }

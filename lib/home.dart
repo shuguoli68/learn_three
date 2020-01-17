@@ -4,6 +4,7 @@ import 'package:share/share.dart';
 import 'camera/camera_simple.dart';
 import 'connect/connect_simple.dart';
 import 'fresh/fresh_simple.dart';
+import 'global/api_service.dart';
 import 'global/common.dart';
 import 'imgpicker/img_picker.dart';
 import 'layout/back_press.dart';
@@ -154,5 +155,11 @@ class _HomePageState extends State<HomePage> {
         child: Icon(Icons.add),
       ),
     );
+  }
+
+  _down(){
+    ApiService.downLoad().then((response){
+      response.data;
+    });
   }
 }
