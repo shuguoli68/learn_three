@@ -15,6 +15,7 @@ import 'layout/permission_simple.dart';
 import 'layout/qrscan_simple.dart';
 import 'layout/slider_screen.dart';
 import 'mvp/view/login_page.dart';
+import 'pay_input/pay_page.dart';
 import 'url_launcher/url_simple.dart';
 
 class HomePage extends StatefulWidget {
@@ -144,6 +145,14 @@ class _HomePageState extends State<HomePage> {
                 child: RaisedButton(onPressed:(){
                   goTo(context, BackPress());
                 },child: Text('返回拦截'),)
+            ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, PayPage());
+                },child: Text('支付密码输入框'),)
             ),
 
           ],

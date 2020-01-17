@@ -1,4 +1,6 @@
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 ///  自定义 密码输入框 第一步 —— 使用画笔画出单个的框
