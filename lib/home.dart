@@ -12,6 +12,7 @@ import 'layout/down_menu.dart';
 import 'layout/frosted_glass.dart';
 import 'layout/large_screen.dart';
 import 'layout/notification_simple.dart';
+import 'layout/ota_update.dart';
 import 'layout/permission_simple.dart';
 import 'layout/pick_page.dart';
 import 'layout/qrscan_simple.dart';
@@ -171,6 +172,14 @@ class _HomePageState extends State<HomePage> {
                 child: RaisedButton(onPressed:(){
                   goTo(context, PickPage());
                 },child: Text('选择器'),)
+            ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, UpdatePage());
+                },child: Text('app下载更新'),)
             ),
 
           ],
