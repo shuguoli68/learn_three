@@ -37,6 +37,8 @@ dependencies:
   qr_flutter: ^3.1.0 # https://pub.dev/packages/qr_flutter
 #  barcode_scan: ^1.0.0 # https://pub.dev/packages/barcode_scan
   simple_permissions: ^0.1.9 # https://pub.dev/packages/simple_permissions
+  chewie: ^0.9.8+1 # https://pub.dev/packages/chewie
+  dropdown_menu: ^1.1.1 # https://pub.flutter-io.cn/packages/dropdown_menu
 
 
 dev_dependencies:

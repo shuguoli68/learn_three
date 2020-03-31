@@ -8,6 +8,7 @@ import 'global/api_service.dart';
 import 'global/common.dart';
 import 'imgpicker/img_picker.dart';
 import 'layout/back_press.dart';
+import 'layout/down_menu.dart';
 import 'layout/frosted_glass.dart';
 import 'layout/large_screen.dart';
 import 'layout/notification_simple.dart';
@@ -153,6 +154,14 @@ class _HomePageState extends State<HomePage> {
                 child: RaisedButton(onPressed:(){
                   goTo(context, PayPage());
                 },child: Text('支付密码输入框'),)
+            ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, DownMenu());
+                },child: Text('下拉菜单'),)
             ),
 
           ],
