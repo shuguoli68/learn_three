@@ -13,6 +13,7 @@ import 'layout/frosted_glass.dart';
 import 'layout/large_screen.dart';
 import 'layout/notification_simple.dart';
 import 'layout/permission_simple.dart';
+import 'layout/pick_page.dart';
 import 'layout/qrscan_simple.dart';
 import 'layout/slider_screen.dart';
 import 'mvp/view/login_page.dart';
@@ -162,6 +163,14 @@ class _HomePageState extends State<HomePage> {
                 child: RaisedButton(onPressed:(){
                   goTo(context, DownMenu());
                 },child: Text('下拉菜单'),)
+            ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, PickPage());
+                },child: Text('选择器'),)
             ),
 
           ],
