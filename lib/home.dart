@@ -16,6 +16,7 @@ import 'layout/ota_update.dart';
 import 'layout/permission_simple.dart';
 import 'layout/pick_page.dart';
 import 'layout/qrscan_simple.dart';
+import 'layout/simple_chart.dart';
 import 'layout/slider_screen.dart';
 import 'layout/swiper_page.dart';
 import 'mvp/view/login_page.dart';
@@ -195,7 +196,7 @@ class _HomePageState extends State<HomePage> {
                 margin: EdgeInsets.all(5),
                 width: double.maxFinite,
                 child: RaisedButton(onPressed:(){
-                  goTo(context, SwiperPage());
+                  goTo(context, ChartPage());
                 },child: Text('各式图表'),)
             ),
 
