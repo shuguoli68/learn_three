@@ -182,6 +182,14 @@ class _HomePageState extends State<HomePage> {
                 },child: Text('app下载更新'),)
             ),
 
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, UpdatePage());
+                },child: Text('swiper轮播'),)
+            ),
+
           ],
         ),
       ),
