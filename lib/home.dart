@@ -191,6 +191,14 @@ class _HomePageState extends State<HomePage> {
                 },child: Text('swiper轮播'),)
             ),
 
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, SwiperPage());
+                },child: Text('各式图表'),)
+            ),
+
           ],
         ),
       ),

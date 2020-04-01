@@ -42,6 +42,7 @@ dependencies:
   flutter_picker: ^1.1.3 # https://pub.flutter-io.cn/packages/flutter_picker
   ota_update: ^2.2.1 # https://pub.flutter-io.cn/packages/ota_update
   flutter_swiper: ^1.1.6 # https://pub.flutter-io.cn/packages/flutter_swiper
+  charts_flutter: ^0.9.0 # https://pub.flutter-io.cn/packages/charts_flutter
 
 
 dev_dependencies:
