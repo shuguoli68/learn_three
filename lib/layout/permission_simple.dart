@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:simple_permissions/simple_permissions.dart';
+//import 'package:simple_permissions/simple_permissions.dart';
 
 class PermissionSimple extends StatefulWidget {
   @override
@@ -9,7 +9,7 @@ class PermissionSimple extends StatefulWidget {
 
 class _PermissionSimpleState extends State<PermissionSimple> {
   String _platformVersion = 'Unknown';
-  Permission permission;
+  /*Permission permission;
 
   @override
   initState() {
@@ -35,7 +35,7 @@ class _PermissionSimpleState extends State<PermissionSimple> {
     setState(() {
       _platformVersion = platformVersion;
     });
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class _PermissionSimpleState extends State<PermissionSimple> {
         body: new Center(
           child: new Column(children: <Widget>[
             new Text('Running on: $_platformVersion\n'),
-            new DropdownButton(
+            /*new DropdownButton(
                 items: _getDropDownItems(),
                 value: permission,
                 onChanged: onDropDownChanged),
@@ -62,14 +62,14 @@ class _PermissionSimpleState extends State<PermissionSimple> {
                 child: new Text("Get permission status")),
             new RaisedButton(
                 onPressed: SimplePermissions.openSettings,
-                child: new Text("Open settings"))
+                child: new Text("Open settings"))*/
           ]),
         ),
       ),
     );
   }
 
-  onDropDownChanged(Permission permission) {
+  /*onDropDownChanged(Permission permission) {
     setState(() => this.permission = permission);
     print(permission);
   }
@@ -97,5 +97,5 @@ class _PermissionSimpleState extends State<PermissionSimple> {
       items.add(item);
     });
     return items;
-  }
+  }*/
 }
