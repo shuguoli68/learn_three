@@ -43,7 +43,7 @@ dependencies:
   ota_update: ^2.2.1 # https://pub.flutter-io.cn/packages/ota_update
   flutter_swiper: ^1.1.6 # https://pub.flutter-io.cn/packages/flutter_swiper
   charts_flutter: ^0.9.0 # https://pub.flutter-io.cn/packages/charts_flutter
-  flappy_search_bar: ^1.7.2
+  flappy_search_bar: ^1.7.2 # https://pub.flutter-io.cn/packages/flappy_search_bar
 
 
 
