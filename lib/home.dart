@@ -17,6 +17,7 @@ import 'layout/permission_simple.dart';
 import 'layout/pick_page.dart';
 import 'layout/qrscan_simple.dart';
 import 'layout/simple_chart.dart';
+import 'layout/slidable_page.dart';
 import 'layout/slider_screen.dart';
 import 'layout/stag_grid_page.dart';
 import 'layout/swiper_page.dart';
@@ -221,7 +222,7 @@ class _HomePageState extends State<HomePage> {
                 margin: EdgeInsets.all(5),
                 width: double.maxFinite,
                 child: RaisedButton(onPressed:(){
-                  goTo(context, StagGridPage());
+                  goTo(context, SlidablePage());
                 },child: Text('侧滑控件'),)
             ),
 
