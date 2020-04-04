@@ -18,6 +18,7 @@ import 'layout/pick_page.dart';
 import 'layout/qrscan_simple.dart';
 import 'layout/simple_chart.dart';
 import 'layout/slider_screen.dart';
+import 'layout/stag_grid_page.dart';
 import 'layout/swiper_page.dart';
 import 'mvp/view/login_page.dart';
 import 'pay_input/pay_page.dart';
@@ -207,6 +208,16 @@ class _HomePageState extends State<HomePage> {
                   goTo(context, ChartPage());
                 },child: Text('Search Bar'),)
             ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, StagGridPage());
+                },child: Text('瀑布流'),)
+            ),
+
+
           ],
         ),
       ),
