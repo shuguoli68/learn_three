@@ -217,6 +217,14 @@ class _HomePageState extends State<HomePage> {
                 },child: Text('瀑布流'),)
             ),
 
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, StagGridPage());
+                },child: Text('侧滑控件'),)
+            ),
+
 
           ],
         ),
