@@ -226,6 +226,14 @@ class _HomePageState extends State<HomePage> {
                 },child: Text('侧滑控件'),)
             ),
 
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, SlidablePage());
+                },child: Text('markdown读取'),)
+            ),
+
 
           ],
         ),
