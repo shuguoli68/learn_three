@@ -34,3 +34,5 @@ samples, guidance on mobile development, and a full API reference.
 
 - 6、intro_slider <a href="https://pub.dev/packages/intro_slider" target="_blank">https://pub.dev/packages/intro_slider</a>
 简介：应用介绍页，有skip、next|done按钮，由Title、Image、Description、Background四部分组成。
+
+- 7、 sqflite数据库  
