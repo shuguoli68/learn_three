@@ -23,6 +23,7 @@ import 'layout/stag_grid_page.dart';
 import 'layout/swiper_page.dart';
 import 'mvp/view/login_page.dart';
 import 'pay_input/pay_page.dart';
+import 'sqlite/sqflite_simple.dart';
 import 'url_launcher/url_simple.dart';
 
 class HomePage extends StatefulWidget {
@@ -234,6 +235,13 @@ class _HomePageState extends State<HomePage> {
                 },child: Text('markdown读取'),)
             ),
 
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, SqfliteSimple());
+                },child: Text('sqflite数据库'),)
+            ),
 
           ],
         ),
