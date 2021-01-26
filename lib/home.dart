@@ -23,6 +23,7 @@ import 'layout/stag_grid_page.dart';
 import 'layout/swiper_page.dart';
 import 'mvp/view/login_page.dart';
 import 'pay_input/pay_page.dart';
+import 'sqlite/file_io.dart';
 import 'sqlite/sqflite_simple.dart';
 import 'url_launcher/url_simple.dart';
 
@@ -241,6 +242,14 @@ class _HomePageState extends State<HomePage> {
                 child: RaisedButton(onPressed:(){
                   goTo(context, SqfliteSimple());
                 },child: Text('sqflite数据库'),)
+            ),
+
+            Container(
+                margin: EdgeInsets.all(5),
+                width: double.maxFinite,
+                child: RaisedButton(onPressed:(){
+                  goTo(context, FileIOSimple(storage: CounterStorage(),));
+                },child: Text('文件读写'),)
             ),
 
           ],
